@@ -1,0 +1,287 @@
+*{
+    padding:0;
+    margin:0;
+    list-style: none;
+    text-decoration: none;
+}
+
+button{
+      outline: none;   
+}
+
+html, body{
+      width: 100%;
+      height: 100%;
+
+      overflow: hidden;
+}
+
+#header {
+      width: 100%;
+      height: 100px;
+      display: block;
+      background-color: #161616;
+}
+
+#inner-header {
+      width: 70%;
+      height: 100%;
+      display: block;
+      margin: 0 auto;
+}
+
+#logo-container {
+      height: 100%;
+      display: table;
+      float: left;
+}
+
+#logo-container img {
+      padding-top: 15px;
+      height: 65%;
+      display: table-cell;
+      vertical-align: middle;
+}
+
+#nav {
+      border: 10px #0c7edb;
+      float: right;
+      height: 100%;
+}
+
+#nav a {
+      height: 100%;
+      display: table;
+      float: left;
+      padding: 0px 20px;
+}
+
+#nav a:last-child {
+      padding-right: 0;
+}
+
+#nav a li {
+      display: table-cell;
+      vertical-align: middle;
+      height: 100%;
+      color: white;
+      font: bold 20px Verdana, Geneva, sans-serif;
+}
+
+@keyframes loadTitle {
+      0% {transform: translateY(-20%); opacity: 0;}
+      100% {transform: translateY(0%); opacity: 1;}
+}
+  
+#main {
+      background: rgb(36, 36, 36);
+      width: 100%;
+      height: calc(100% + 100px);
+      position: relative;
+}
+
+#top-right {
+      background: rgb(36, 36, 36);
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 50%;
+      height: 30%;
+      font: bold 20px Verdana, Geneva, sans-serif;
+      color: white;
+
+}
+
+#bottom-right {
+      background: rgb(36, 36, 36);
+      position: absolute;
+      top: 30%;
+      left: 0%;
+      width: 50%;
+      height: 55%;
+      font: bold 20px Verdana, Geneva, sans-serif;
+      color: white;
+
+}
+  
+#left {
+      background: rgb(36, 36, 36);
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      width: 50%;
+      height: 85%;
+}
+
+
+#sun {
+      border-radius: 50%;
+      background-color: rgb(250, 233, 2);
+      box-shadow : 0 0 128px rgb(201, 114, 15);
+      position: absolute;
+      top: calc(50% - 3vw);
+      left: calc(50% - 3vw);
+      width: 6vw;
+      height: 6vw;
+}
+
+
+
+#soundstrips-orbit {
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      position: absolute;
+      top: calc(50% - 20vw);
+      left: calc(50% - 20vw);
+      width: 40vw;
+      height: 40vw;
+      animation: spin-right 40s linear infinite;
+}
+
+#soundstrips {
+      background-color : #0c7edb;
+      border-style: none;
+      border-radius : 75px;
+      position: absolute;
+      top: 0;
+      left: 70%;
+      width: 4vw;
+      height: 4vw;
+      animation: spin-left 40s linear infinite;
+}
+
+#stackunderflow-orbit {
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      position: absolute;
+      top: calc(50% - 15vw);
+      left: calc(50% - 15vw);
+      width: 30vw;
+      height: 30vw;
+      animation: spin-right 40s linear infinite;
+}
+
+#stackunderflow {
+      background-color : #0c7edb;
+      border-style: none;
+      border-radius : 75px;
+      position: absolute;
+      top: 0;
+      left: 70%;
+      width: 4vw;
+      height: 4vw;
+      animation: spin-left 40s linear infinite;
+}
+
+#ctf-orbit {
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      position: absolute;
+      top: calc(50% - 10vw);
+      left: calc(50% - 10vw);
+      width: 20vw;
+      height: 20vw;
+      animation: spin-right 40s linear infinite;
+}
+
+#ctf {
+      background-color : #0c7edb;
+      border-style: none;
+      border-radius : 75px;
+      position: absolute;
+      top: 0;
+      left: 70%;
+      width: 2vw;
+      height: 2vw;
+      animation: spin-left 40s linear infinite;
+}
+
+.project-name {
+      top: -80px;
+      left: -60px;
+      opacity: 1;
+      font: bold 20px Verdana, Geneva, sans-serif;
+      color: white;
+
+}
+
+button:hover {
+      box-shadow : 0 0 10px 8px rgb(255, 255, 255);
+}
+
+@keyframes spin-right {
+      100% {
+      transform: rotate(360deg);
+      }
+}
+
+@keyframes spin-left {
+      100% {
+      transform: rotate(-360deg);
+
+      }
+}
+
+/* The Modal (background) */
+#modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      top: 0;
+      
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0);  /* Fallback color */
+      background-color: rgba(0,0,0,0.25);  /* Black w/ opacity */
+}
+    
+ /* Modal Content/Box */
+.modal-content {
+      background-color: #ffffff;
+      margin: 20% auto; /* 15% from the top and centered */
+      padding: 0px;
+      border-radius: 20px;
+      width: 80%; /* Could be more or less, depending on screen size */
+      position: relative;
+
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      animation-name: animatetop;
+      animation-duration: 0.4s
+}
+    
+/* The Close Button */
+.close {
+      color: rgb(255, 255, 255);
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+}
+    
+.close:hover,
+.close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+}
+
+/* Modal Header */
+.modal-header {
+      padding: 2px 16px;
+      background-color: #22223b;
+      color: white;
+      border-radius: 20px 20px 0 0;
+      font-family: "Lucida Console", "Courier New", monospace;
+}
+    
+/* Modal Body */
+.modal-body {
+      padding: 2px 16px;
+      font-family: "Lucida Console", "Courier New", monospace;
+}
+    
+/* Add Animation */
+@keyframes animatetop {
+      from {top: -300px; opacity: 0}
+      to {top: 0; opacity: 1}
+}
