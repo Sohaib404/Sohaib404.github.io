@@ -78,6 +78,8 @@ html, body{
       width: 100%;
       height: calc(100% + 100px);
       position: relative;
+
+
 }
 
 #top-right {
@@ -86,19 +88,22 @@ html, body{
       top: 0%;
       left: 0%;
       width: 50%;
-      height: 30%;
+      height: 35%;
       font: bold 20px Verdana, Geneva, sans-serif;
       color: white;
-
+      padding-top:  40px;
+      padding-left: 40px;
+      overflow:visible;
+      
 }
 
 #bottom-right {
       background: rgb(36, 36, 36);
       position: absolute;
-      top: 30%;
+      top: 35%;
       left: 0%;
       width: 50%;
-      height: 55%;
+      height: 50%;
       font: bold 20px Verdana, Geneva, sans-serif;
       color: white;
 
@@ -111,6 +116,18 @@ html, body{
       left: 50%;
       width: 50%;
       height: 85%;
+}
+
+#rocket {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(50%, 50%);
+      pointer-events: none;
+      box-sizing: border-box;
+      transition: 0.4s;
 }
 
 
@@ -158,11 +175,11 @@ html, body{
       left: calc(50% - 15vw);
       width: 30vw;
       height: 30vw;
-      animation: spin-right 40s linear infinite;
+      animation: spin-right 20s linear infinite;
 }
 
 #stackunderflow {
-      background-color : #0c7edb;
+      background-color : #14e01e;
       border-style: none;
       border-radius : 75px;
       position: absolute;
@@ -170,7 +187,7 @@ html, body{
       left: 70%;
       width: 4vw;
       height: 4vw;
-      animation: spin-left 40s linear infinite;
+      animation: spin-left 20s linear infinite;
 }
 
 #ctf-orbit {
@@ -181,11 +198,11 @@ html, body{
       left: calc(50% - 10vw);
       width: 20vw;
       height: 20vw;
-      animation: spin-right 40s linear infinite;
+      animation: spin-right 7s linear infinite;
 }
 
 #ctf {
-      background-color : #0c7edb;
+      background-color : #db3c0c;
       border-style: none;
       border-radius : 75px;
       position: absolute;
@@ -193,7 +210,7 @@ html, body{
       left: 70%;
       width: 2vw;
       height: 2vw;
-      animation: spin-left 40s linear infinite;
+      animation: spin-left 7s linear infinite;
 }
 
 .project-name {
