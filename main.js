@@ -2,7 +2,7 @@
 var modal = document.getElementById("modal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("about");
+var btn = document.getElementById("soundstrips");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
