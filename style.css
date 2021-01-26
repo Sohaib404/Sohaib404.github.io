@@ -80,11 +80,6 @@ html, body{
       transform: scale(1.3);
       color: rgb(161, 161, 161);
 }
-
-@keyframes loadTitle {
-      0% {transform: translateY(5%); opacity: 0;}
-      100% {transform: translateY(0%); opacity: 1;}
-}
   
 #main {
       background: rgb(36, 36, 36);
@@ -93,7 +88,7 @@ html, body{
       position: relative;
 }
 
-#top-right {
+#top-left {
       background: rgb(36, 36, 36);
       position: absolute;
       top: 0%;
@@ -104,41 +99,80 @@ html, body{
       color: white;
       padding-top:  40px;
       padding-left: 40px;
-      overflow:visible;
+      white-space: pre-line;
+      word-wrap: break-word;
       animation: loadTitle 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-#bottom-right {
+@keyframes loadTitle {
+      0% {transform: translateY(5%); opacity: 0;}
+      100% {transform: translateY(0%); opacity: 1;}
+}
+
+
+#bottom-left {
       background: rgb(36, 36, 36);
       position: absolute;
       top: 35%;
       left: 0%;
       width: 50%;
       height: 50%;
-      font: bold 20px Verdana, Geneva, sans-serif;
-      color: white;
-
+      display: inline-block;
+      text-align: center;
+      animation: loadSystem 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
   
-#left {
+#right {
       background: rgb(36, 36, 36);
       position: absolute;
       top: 0%;
       left: 50%;
       width: 50%;
       height: 85%;
+      display: inline-block;
+      text-align: center;
+      animation: loadSystem 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes loadSystem {
+      0% {transform: translateY(15%); opacity: 0;}
+      25% {opacity: 0;}
+      100% {transform: translateY(0%); opacity: 1;}
+}
+
+
+.system-name-holder {
+      font: 25px Verdana, Geneva, sans-serif;
+      background-color: #ffffff4f;
+      border-radius: 10px 10px;
+      width: 150px;
+      height: 30px;
+      position: absolute;
+      top: 5%;
+      left: calc(50% - 3vw);
+}
+
+.system-name {
+      font: bold 25px Verdana, Geneva, sans-serif;
+      color: rgb(255, 255, 255);
+      position: absolute;
+      left: 10%;
 }
 
 #rocket {
       position: absolute;
       width: 20px;
       height: 20px;
-      top: 50%;
-      left: 50%;
-      transform: translate(50%, 50%);
+      top: 25%;
+      left: 25%;
       pointer-events: none;
       box-sizing: border-box;
-      transition: 0.4s;
+      transition: 0.1s;
+}
+
+#rocket-icon {
+      position: absolute;
+      transition: 0.001s;
 }
 
 
@@ -159,10 +193,10 @@ html, body{
       border-radius: 50%;
       border: 2px solid #ffffff;
       position: absolute;
-      top: calc(50% - 20vw);
-      left: calc(50% - 20vw);
-      width: 40vw;
-      height: 40vw;
+      top: calc(50% - 17vw);
+      left: calc(50% - 17vw);
+      width: 35vw;
+      height: 35vw;
       animation: spin-right 40s linear infinite;
 }
 
@@ -182,10 +216,10 @@ html, body{
       border-radius: 50%;
       border: 2px solid #ffffff;
       position: absolute;
-      top: calc(50% - 15vw);
-      left: calc(50% - 15vw);
-      width: 30vw;
-      height: 30vw;
+      top: calc(50% - 11vw);
+      left: calc(50% - 11vw);
+      width: 22vw;
+      height: 22vw;
       animation: spin-right 20s linear infinite;
 }
 
@@ -202,18 +236,18 @@ html, body{
 }
 
 
-#ctf-orbit {
+#tmtroubles-orbit {
       border-radius: 50%;
       border: 2px solid #ffffff;
       position: absolute;
-      top: calc(50% - 10vw);
-      left: calc(50% - 10vw);
-      width: 20vw;
-      height: 20vw;
+      top: calc(50% - 5vw);
+      left: calc(50% - 5vw);
+      width: 10vw;
+      height: 10vw;
       animation: spin-right 7s linear infinite;
 }
 
-#ctf {
+#tmtroubles {
       background-color : #db3c0c;
       border-style: none;
       border-radius : 75px;
@@ -225,17 +259,71 @@ html, body{
       animation: spin-left 7s linear infinite;
 }
 
+#meteoride-orbit {
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      position: absolute;
+      top: calc(50% - 5vw);
+      left: calc(50% - 5vw);
+      width: 10vw;
+      height: 10vw;
+      animation: spin-right 7s linear infinite;
+}
+
+#meteoride {
+      background-color : #950eca;
+      border-style: none;
+      border-radius : 75px;
+      position: absolute;
+      top: 0;
+      left: 70%;
+      width: 2vw;
+      height: 2vw;
+      animation: spin-left 7s linear infinite;
+}
+
+#supersun-orbit {
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      position: absolute;
+      top: calc(50% - 10vw);
+      left: calc(50% - 10vw);
+      width: 20vw;
+      height: 20vw;
+      animation: spin-right 10s linear infinite;
+}
+
+#supersun {
+      background-color : #e0f804;
+      border-style: none;
+      border-radius : 75px;
+      position: absolute;
+      top: 0;
+      left: 70%;
+      width: 3vw;
+      height: 3vw;
+      animation: spin-left 10s linear infinite;
+}
+
 .project-name {
       top: -80px;
-      left: -60px;
-      opacity: 1;
+      left: 0%;
+      opacity: 0;
       font: bold 20px Verdana, Geneva, sans-serif;
       color: white;
-
+      background-color: #323257;
+      width: 100px;
+      transform: translateY(-5%);
 }
+
 
 button:hover {
       box-shadow : 0 0 10px 8px rgb(255, 255, 255);
+}
+
+button:hover .project-name{
+      opacity: 1;
+      transform: translateY(0%);
 }
 
 @keyframes spin-right {
@@ -252,7 +340,7 @@ button:hover {
 }
 
 /* The Modal (background) */
-#modal {
+.modal {
       display: none; /* Hidden by default */
       position: fixed; /* Stay in place */
       z-index: 2; /* Sit on top */
@@ -322,19 +410,20 @@ button:hover {
 
 /* Modal Body */
 .modal-body {
-
+      position: absolute;
       font-family: "Lucida Console", "Courier New", monospace;
-      height: 100%;
-      border-radius: 0 0 20px 20px;
+      width: 100%;
+      height: 75%;
+      border-radius: 0 0 50px 50px;
 }
 
 .modal-images {
-      position: relative;
+      position: absolute;
       background-color: #14e01e;
       float: left;
       width: 50%;
-      height: 60%;
-      display: block;
+      height: 100%;
+      display: inline;
       border-radius: 0 0 0 20px;
 }
 
