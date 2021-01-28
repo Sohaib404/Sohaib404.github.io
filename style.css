@@ -419,20 +419,28 @@ button:hover .project-name{
 
 .modal-images {
       position: absolute;
-      background-color: #14e01e;
+      /*background-color: #14e01e;*/
       float: left;
       width: 50%;
       height: 100%;
       display: inline;
       border-radius: 0 0 0 20px;
+      overflow: auto;
+}
+
+.modal-images img {
+      width: 100%;
 }
 
 .modal-text {
-      
+      font: bold 20px Verdana, Geneva, sans-serif;
+      color: black;
       float: left;
+      position: absolute;
+      left: 50%;
       width: 50%;
       height: 100%;
-      display: block;
+      display: inline;
       border-radius: 0 0 20px 0;
 }
 
