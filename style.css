@@ -12,7 +12,7 @@ button{
 html, body{
       width: 100%;
       height: 100%;
-
+      background: rgb(36, 36, 36);
       overflow: hidden;
 }
 
@@ -290,7 +290,7 @@ html, body{
       left: calc(50% - 10vw);
       width: 20vw;
       height: 20vw;
-      animation: spin-right 10s linear infinite;
+      animation: spin-right 15s linear infinite;
 }
 
 #supersun {
@@ -302,7 +302,7 @@ html, body{
       left: 70%;
       width: 3vw;
       height: 3vw;
-      animation: spin-left 10s linear infinite;
+      animation: spin-left 15s linear infinite;
 }
 
 .project-name {
@@ -384,9 +384,20 @@ button:hover .project-name{
       width: 100%;
 }
 
+.modal-tags li{
+      font: 30px Verdana, Geneva, sans-serif;
+      background-color: #ffffff63;
+      border-radius: 10px;
+      height: 100%;
+      display: table;
+      float: left;
+      padding: 5px;
+      margin: 10px 5%;
+}
+
 .modal-title {
-      font-family: "Lucida Console", "Courier New", monospace;
-      padding-top: 20px;
+      font: 75px Verdana, Geneva, sans-serif;
+      padding-top: 5px;
       padding-left: 20px;
 }
 
@@ -433,15 +444,17 @@ button:hover .project-name{
 }
 
 .modal-text {
-      font: bold 20px Verdana, Geneva, sans-serif;
+      font: 20px Verdana, Geneva, sans-serif;
       color: black;
       float: left;
       position: absolute;
       left: 50%;
-      width: 50%;
+      width: 40%;
       height: 100%;
       display: inline;
       border-radius: 0 0 20px 0;
+      padding: 2.5%;
+      overflow: auto;
 }
 
 /* Add Animation */
